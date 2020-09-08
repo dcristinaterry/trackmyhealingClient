@@ -15,8 +15,9 @@ const login = (loginProps) => {
                 </div>
 
 
+                <label>Password: </label>
                 <div>
-                    <label>Password: </label>
+                    
                     <input type="password" value={loginProps.password} onChange={loginProps.handlePassword} />
                 </div>
 
@@ -24,8 +25,6 @@ const login = (loginProps) => {
             </form>
 
         </div>
-
-
     );
 
 }
