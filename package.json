@@ -4,12 +4,11 @@
   "description": "Healing tracker.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dcristinaterry/trackmyhealing.git"
+    "url": "https://github.com/dcristinaterry/trackmyhealing.git"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +19,6 @@
   "homepage": "https://github.com/dcristinaterry/trackmyhealing#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "express-mysql-session": "^2.1.4",
     "express-session": "^1.17.1",

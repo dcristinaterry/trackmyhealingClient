@@ -6,7 +6,7 @@ const Sequelize = require('sequelize'); //nmp packages
 const basename = path.basename(__filename);//current file name
 const env = process.env.NODE_ENV || 'development'; //  environment - default development
 const config = require(__dirname + '/../config/config.json')[env]; //
-const db = {}; //make an object
+const db = {}; //makes an object
 
 let sequelize;
 if (config.use_env_variable) { //if there's something defined by the environment do this work
