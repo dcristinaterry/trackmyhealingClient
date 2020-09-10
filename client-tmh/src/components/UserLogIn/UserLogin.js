@@ -1,9 +1,11 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 
+const userLogin = (loginProps) => {
 
-const login = (loginProps) => {
-
-
+    const signUpHandler= ()=>{
+        loginProps.history.replace("/signup");
+    }
     return (
         <div>
             {/* //onSubmit={this.handleSubmit}> */}
@@ -29,9 +31,13 @@ const login = (loginProps) => {
                 <button type="submit" value="submit">Submit</button>
             </form>
 
+            <div>
+                <button  onClick={signUpHandler}>Register</button>
+
+            </div>
         </div>
     );
 
 }
 
-export default login;
+export default withRouter(userLogin);
