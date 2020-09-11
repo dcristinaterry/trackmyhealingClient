@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dcristinaterry/trackmyhealing#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "express-mysql-session": "^2.1.4",
     "express-session": "^1.17.1",
