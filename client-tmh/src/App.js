@@ -6,7 +6,7 @@ import UserLogin from './components/UserLogIn/UserLogin';
 import UserSingUp from './components/UserSingUp/UserSingUp';
 
 
-const App = () => {
+const App= ()=> {
   return (
     <Router>
       <StoreProvider>
