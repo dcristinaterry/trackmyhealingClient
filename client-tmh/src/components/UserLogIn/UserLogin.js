@@ -14,9 +14,6 @@ const UserLogin = (loginProps) => {
 
         API_CALL.authenticate(form).then(response => {
 
-
-
-
             if (response.data) {
                 console.log("in condition", response);
                 loginProps.history.replace("/home");
@@ -24,9 +21,7 @@ const UserLogin = (loginProps) => {
 
             }
         })
-
     }
-
 
     const handleInput = (event) => {
         console.log("input usesrname", event.target);
@@ -39,7 +34,9 @@ const UserLogin = (loginProps) => {
         loginProps.history.replace("/signup");
     }
 
-    const googleHandler= ()=>{}
+    const googleHandler= ()=>{
+        API_CALL.googleAuthenticate().then(response => console.log(response));
+    }
     const faceBookHandler= ()=>{}
     return (
 
@@ -93,13 +90,13 @@ const UserLogin = (loginProps) => {
                 <div className="mb-2">
                     <button 
                      className="bg-blue-500 w-full h-8 text-white"
-                    onClick={faceBookHandler}>Sign up with Facebook</button>
+                    onClick={faceBookHandler}>Login with Facebook</button>
                 </div>
 
                 <div>
                     <button 
                      className="bg-red-500 w-full h-8 text-white"
-                    onClick={googleHandler}>Sign up with Google</button>
+                    onClick={googleHandler}>Login with Google</button>
                 </div>
                 
             </div>
