@@ -81,6 +81,7 @@ const UserLogin = (loginProps) => {
 
 
 
+
                 <div className="mb-2">
                     <button 
                      className="bg-green-300 w-full h-8 text-white"
@@ -94,9 +95,9 @@ const UserLogin = (loginProps) => {
                 </div>
 
                 <div>
-                    <button 
+                    <a href="http://localhost:3001/api/auth/google"
                      className="bg-red-500 w-full h-8 text-white"
-                    onClick={googleHandler}>Login with Google</button>
+                    >Login with Google</a>
                 </div>
                 
             </div>

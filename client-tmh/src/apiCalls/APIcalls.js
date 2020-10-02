@@ -12,6 +12,6 @@ export default{
 
     googleAuthenticate: function(){
         console.log("calling google")
-        return axios.get('/api/auth/google')
+        return axios.get('http://localhost:3001/auth/google').then(user=>console.log(user)).catch(err=>console.log(err))
     }
 }
