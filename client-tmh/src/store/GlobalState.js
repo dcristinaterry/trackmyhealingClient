@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, useContext } from 'react'
+import React, { createContext, useReducer, useContext, useState, useEffect} from 'react'
+import API_CALL from '../apiCalls/APIcalls'
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -34,6 +35,15 @@ const StoreProvider = ({ value = [], ...props }) => {
       },
       loading:false,
     });
+
+    const [user, setUser] = useState({});
+    useEffect(()=>{
+      API_CALL.googleAuthenticate().then(res =>{
+        console.log(res);
+        setUser(res);
+
+      })
+    }, [])
   
     return <Provider value={[state, dispatch]} {...props} />;
   };
