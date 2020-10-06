@@ -1,16 +1,21 @@
 import React from 'react';
 // import './styles/app.css';
 import { BrowserRouter as Router, Route, Switch,  } from "react-router-dom";
-import {StoreProvider} from './utils/GlobalState'
+// import {StoreProvider} from './utils/GlobalState'
+import configureStore from './store/configureStore'
+import {Provider} from 'react-redux'
+
 import UserLogin from './components/UserLogIn/UserLogin';
 import UserSingUp from './components/UserSingUp/UserSingUp';
 import UserLandingPage from './components/UserLandingPage/UserLandingPage'
+
+const store = configureStore();
 
 
 const App= ()=> {
   return (
     <Router>
-      <StoreProvider>
+      <Provider store={store}>
         
           <Switch>
             {/* <Route path="/userDashboard" component={UserDashboard} /> */}
@@ -20,7 +25,7 @@ const App= ()=> {
             <Route path="/home" component={UserLandingPage}/>
           </Switch>
       
-      </StoreProvider>
+      </Provider>
     </Router>
   );
 }

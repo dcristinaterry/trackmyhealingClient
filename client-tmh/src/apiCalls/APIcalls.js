@@ -6,9 +6,9 @@ export default{
         return axios.post('/api/auth/register',user);
     },
 
-    authenticate: function(data){
-        return axios.post('/api/auth/login',data);
-    },
+    // authenticate: function(data){
+    //     return axios.post('/api/auth/login',data);
+    // },
 
     googleAuthenticate: function(){
         console.log("calling google")

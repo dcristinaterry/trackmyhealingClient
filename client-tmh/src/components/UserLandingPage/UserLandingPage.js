@@ -1,12 +1,13 @@
 import React from "react"
+import NavBar from '../NavBar/NavBar'
 
 const LandingPage = (props) => {
 
 
     return (
         <div>
-            <h1>USER LOGEDIN</h1>
-
+            <NavBar/>
+            <h1>TRACK MY HEALING</h1>
         </div>
     )
 
